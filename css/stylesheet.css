@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Raleway;
+  margin: 0;
+}
+
+.button {
+  font-family: Raleway;
+  font-size: 2em; /* Normale Schriftgröße: 16px = 1em */
+  font-weight: 100;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+.box {
+  text-align: center;
+  background: linear-gradient(to bottom, #eee, #fff); /*Richtung, von welcher Farbe, zu welcher Farbe*/
+  padding: 80px;
+}
+
+.button-1 {
+  background: #666;
+  color: white;
+  transition: all 0.2s;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.4);
+}
+
+.button-1:hover {
+  transform: scale(1.2);
+  box-shadow: 15px 15px 20px rgba(0,0,0,0.2);
+  font-weight: 900;
+}
+
+.button-2 {
+  position: relative;
+}
+
+.button-2:after {
+  content: '';
+  background: tomato;
+  position: absolute;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  bottom: 0;
+  /*overflow: hidden;*/
+  transition: all 0.5s ease-in-out 0.2s;;
+}
+
+.button-2:hover:after {
+  width: 100%;
+}
+
+.button-3 {
+  position: relative;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+}
+
+.button-3:hover {
+  color: #fff;
+}
+
+.button-3:after {
+  content: '';
+  background: tomato;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  bottom: 0;
+  /*overflow: hidden;*/
+  transition: all 0.5s ease-in-out 0.2s;
+  z-index: -1;
+}
+
+.button-3:hover:after {
+  height: 100%;
+}
+
+.box-banner {
+  background: url(http://nosrc.io/1280x720/stock);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.button-4 {
+  background: #666;
+  color: #fff;
+}
+
+.button-4:hover {
+    animation: fancy 0.5s infinite alternate;
+}
+
+@keyframes fancy {
+  from {
+    transform: scale(1) rotate(10deg);
+      letter-spacing: 0;
+  }
+
+  to {
+    transform: scale(1.5);
+    letter-spacing: 10px;
+  }
+}
